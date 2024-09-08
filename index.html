@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharma</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./pharma.css">
+    <script src="https://kit.fontawesome.com/f01540e567.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #17a2b8;
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+        }
+        ul>div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        ul>input {
+            width: 25rem;
+            height: 40px;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: none;
+            padding-left: 10px;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+        }
+        #main>button {
+            background-color: yellow;
+            color: black;
+            width: 90px;
+            height: 40px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 10px;
+        }
+        a {
+            padding: 20px;
+            display: block;
+            text-decoration: none;
+            justify-content: space-around;
+            color: white;
+            font-weight: bold;
+        }
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+            border-radius: 15px;
+        }
+        .card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border: none;
+    height: 400px; /* Adjust this height as needed */
+}
+
+.card img {
+    max-height: 200px; /* Adjust this height as needed */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Ensures the body takes up the remaining space in the card */
+    justify-content: space-between;
+}
+
+.card-body button {
+    align-self: flex-start; /* Aligns the button to the start of the card body */
+}
+
+.card-title {
+    margin-bottom: 0.5rem;
+}
+
+        footer {
+            display: flex;
+            justify-content: space-evenly;
+            background-color: black;
+            margin-top: 20px;
+            padding: 20px;
+        }
+        footer div {
+            color: white;
+        }
+        footer div input {
+            width: 13rem;
+            height: 35px;
+            padding-left: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        footer div button {
+            width: 4.5rem;
+            height: 35px;
+            border: none;
+            border-radius: 5px;
+            background-color: yellow;
+        }
+        #cart-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: lightyellow;
+        }
+        #cart-info span {
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul id="main">
+            <div>
+                <li><a href="#">Home</a></li>
+            </div>
+            <input type="text" placeholder="Search Product">
+            <button>Search</button>
+            <div>
+                <li><a href="#">User</a></li>
+                <li><a href="#">Wallet</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </div>
+        </ul>
+        <div id="cart-info">
+            <span>Cart: <span id="cart-count">0</span> items</span>
+            <span>Total Price: ₹<span id="cart-total">0</span></span>
+        </div>
+    </nav>
+
+    <h1 class="text-center my-4"><i>WELCOME TO OUR PHARMA...</i></h1>
+    <img src="https://www.tehy.fi/sites/default/files/styles/16_9/public/media/images/l%C3%A4%C3%A4kehylly_istock.png.webp?itok=QjZ30W_L" alt="Pharma store" class="hero-image">
+
+    <main class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://m.media-amazon.com/images/I/71zPBKtrdpL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="Paracetamol">
+                    <div class="card-body">
+                        <h5 class="card-title">Paracetamol</h5>
+                        <p class="card-text">Price: ₹149</p>
+                        <p>Rating: ⭐⭐⭐⭐⭐</p>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="data:image/jpeg;base64,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" class="card-img-top" alt="Hairbless">
+                    <div class="card-body">
+                        <h5 class="card-title">Hairbless</h5>
+                        <p class="card-text">Price: ₹180</p>
+                        <p>Rating: ⭐⭐⭐⭐</p>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://m.media-amazon.com/images/I/510Uiz6vUsL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="Shelcal 500">
+                    <div class="card-body">
+                        <h5 class="card-title">Shelcal 500</h5>
+                        <p class="card-text">Price: ₹1149</p>
+                        <p>Rating: ⭐⭐⭐⭐⭐</p>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://www.soignerpharma.com/wp-content/uploads/2017/11/xylid-p.jpg" class="card-img-top" alt="Dynapar">
+                    <div class="card-body">
+                        <h5 class="card-title">Dynapar Calcium</h5>
+                        <p class="card-text">Price: ₹449</p>
+                        <p>Rating: ⭐⭐⭐⭐⭐</p>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <h2>Service</h2>
+            <hr>
+            <h4>About Us</h4>
+            <h4>More Detail</h4>
+            <h4>Contact</h4>
+        </div>
+        <div>
+            <h4>Sector 22, Near Gandhi Hospital <br> India 400077</h4>
+            <h4>+91 8521365479</h4>
+            <h4>pharma@gmail.com</h4>
+        </div>
+        <div>
+            <h2>Follow us</h2>
+            <h4>Instagram <i class="fa-brands fa-instagram"></i></h4>
+            <h4>Facebook <i class="fa-brands fa-facebook"></i></h4>
+            <h4>Twitter <i class="fa-brands fa-twitter"></i></h4>
+        </div>
+        <div>
+            <input type="text" placeholder="xyz@gmail.com">
+            <button>Subscribe</button>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize an empty array to store cart items
+        let cart = [];
+        let totalPrice = 0;
+
+        // Function to add product to cart
+        function addToCart(productName, productPrice) {
+            // Add product to cart
+            cart.push({ name: productName, price: productPrice });
+
+            // Update cart count and total price
+            document.getElementById('cart-count').innerText = cart.length;
+            totalPrice += productPrice;
+            document.getElementById('cart-total').innerText = totalPrice;
+
+            // Save cart data to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Show popup message
+            alert(`${productName} added to cart`);
+        }
+
+        // Add event listeners to the buttons
+        document.querySelectorAll('button').forEach((button, index) => {
+            button.addEventListener('click', () => {
+                const products = [
+                    { name: "Paracetamol", price: 149 },
+                    { name: "Hairbless", price: 180 },
+                    { name: "Shelcal 500", price: 1149 },
+                    { name: "Dynapar Calcium", price: 449 }
+                ];
+
+                // Add the corresponding product to the cart
+                addToCart(products[index].name, products[index].price);
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
